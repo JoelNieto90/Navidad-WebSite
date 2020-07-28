@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joel Nieto Gomez"> 
+        <meta name="description" content="Navidad en Familia">
+        <meta name="keywords" content="Nieto, Navidad, Joel Nieto"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link href="css/estiloscss.css" type="text/css" rel="stylesheet">
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <!--Tipografias de Google-->
+        <link href="http://fonts.googleapis.com/css?family=Charmonman|Permanent+Marker|Codystar|Monoton|Raleway|Tangerine" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+
+        <!--Iconos Material Design-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <title>Posada 2018</title>
+
+        <style type="text/css">
+          /*CAMBIA LAS IMAGENES DE FONDO*/
+          #fondo1{
+              position: fixed;
+              width: 100%;
+              height: 100vh;
+              background: url('Imagenes/Background/backfondo.jpg') no-repeat center center fixed;
+              background-size: cover;
+              animation: miAnimacion 18s linear 12s infinite;
+              -webkit-animation: miAnimacion 18s linear 12s infinite;
+              -moz-animation: miAnimacion 18s linear 12s infinite;
+          }
+
+          #fondo2{
+              position: fixed;
+              width: 100%;
+              height: 100vh;
+              background: url('../Imagenes/Background/Modern.jpg') no-repeat center center fixed;
+              background-size: cover;
+              animation: miAnimacion 18s linear 6s infinite;
+              -webkit-animation: miAnimacion 18s linear 6s infinite;
+              -moz-animation: miAnimacion 18s linear 6s infinite;
+          }
+
+          #fondo3{
+              position: fixed;
+              width: 100%;
+              height: 100vh;
+              background: url('../Imagenes/Background/Christmas.jpg') no-repeat center center fixed;
+              background-size: cover;
+              animation: miAnimacion 18s linear 0s infinite;
+              -webkit-animation: miAnimacion 18s linear 0s infinite;
+              -moz-animation: miAnimacion 18s linear 0s infinite;
+          }
+
+          /*BARRA DE NAVEGACION*/
+          .navbar{
+            padding: .6rem 1rem;
+            color: white;
+            font-size: 1rem;
+          }
+          .bg-dark {
+              background-color: #b01b0f !important;
+          }
+          .navbar-dark .navbar-nav .nav-link {
+            color: white;
+            padding-left: .9rem;
+            padding-right: 2.5rem;
+            font-family: 'Montserrat';
+          }
+
+
+          /*HOME*/
+          .felizpino{
+            margin-top: 5.5rem;
+          }
+
+          .titulo{
+            color: black;
+            text-align: center;
+          }
+
+          h1{
+            font-size: 6.8vw;
+            font-family: 'Tangerine';
+            color:  #b7180c ;
+          }
+
+          /*MENSAJE NAVIDEÑO*/
+          .mensaje{
+            padding: 25px;
+          }
+
+          .lead{
+            font-size: 1.3rem;
+          }
+
+          @media screen and (max-width: 480px) {
+            .logomerry {
+              display: none;
+            }
+          }
+
+          /*album fotos*/
+          ..mb-4{
+              margin-bottom: 1.8rem !important;
+              width: 
+          }
+
+          .transparent {
+            opacity: 0.7;
+            padding: 10px;
+          }
+
+          .transparent:hover{
+            opacity: 1;
+          }
+
+          .img-thumbnail {
+            padding: .25rem;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: .25rem;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /*Ubicación*/
+        .evento{
+          background-color: #836107;
+          color: white;
+        }
+
+        .tituloubicacion{
+          font-weight: bold;
+          font-family: Codystar;
+          vertical-align: center;
+        }
+
+        .textoubicacion{
+          font-family: Montserrat;
+          font-size: 1.1rem;
+          vertical-align: center;
+        }
+
+        .map-responsive{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        }
+        .map-responsive iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+            border: 4px solid  #830772;
+        }
+
+        .footer {
+            background-attachment: fixed;
+        }
+
+        .footer {
+            padding: 6.25rem 0 2rem;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.85))), url('../BOOTSTRAP/Imagenes/Background/contactofondo.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url('../BOOTSTRAP/Imagenes/Background/contactofondo.jpg');
+                background-position-x: 0%, 0%;
+                background-position-y: 0%, 0%;
+                background-attachment: scroll, scroll;
+                background-size: auto auto, auto auto;
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+        }
+
+        .h5 {
+          font-size: 2.90625rem;
+          font-weight: 900;
+          line-height: 1.2;
+        }
+
+        .footer .footer-social {
+          padding: 6.25rem 0;
+        }
+
+        .px-3 {
+          padding-left: 3rem !important;
+        }
+
+        #seccion2{
+          padding-top: 30px;
+        }
+
+        #seccion3{
+          padding-top: 30px;
+        }
+        </style>
+
+
+    </head>
+    <body data-spy="scroll">
+
+      <!--BARRA DE NAVEGACIÓN-->
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- logo -->
+            <a class="navbar-brand" href="#">
+              <img src="Imagenes/Background/pino.png" width="42" height="42" alt="">
+            </a>
+
+            <!--Enlaces-->
+            <div class="collapse navbar-collapse" id="opciones">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#seccion1">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#seccion2">Mensaje</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#seccion3">Ubicación</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#seccion4">Organización</a>
+                </li>  
+                <li class="nav-item">
+                  <a class="nav-link" href="Listado.php">Registro</a>
+                </li>  
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Iniciar Sesión</a>        
+                      <div class="dropdown-menu text-center">
+                          <form class="pr-4 pl-4">
+                              <div class="form-group"> 
+                                <label for="nombre">Usuario:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                              </div> 
+                              <div class="form-group"> 
+                                <label for="clave">Password:</label>
+                                <input type="password" class="form-control" id="clave" name="clave" required>
+                              </div> 
+                              <button type="submit" class="btn btn-outline-info">Enviar</button>       
+                          </form>
+                      </div>
+                    </div>  
+                </li>
+              </ul>
+            </div>
+      </nav>
+
+
+      <!--Contenido-->
+      <div class="container-fluid">
+
+        <!--Home-->
+        <div id="seccion1" class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 felizpino titulo">
+            <h1>Posada Navideña 2018</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1 col-md-1 col-sm-0 col-xs-0">
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <img src="Imagenes/Background/merryvenados.jpg" class="img-fluid" alt="Responsive image" width="100%">
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-0 col-xs-0">
+          </div>
+        </div>
+
+        <!--Mensaje-->
+        <div id="seccion2"></div>
+        <div class="row mensaje">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 titulo">
+            <h1>Mensaje Navideño</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <img src="Imagenes/Background/Bannenavidad.jpg" class="img-fluid" alt="Responsive image" width="100%" height="70%">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-0 col-xs-0 logomerry">
+            <img src="Imagenes/Background/logomerry.png" class="img-fluid" alt="Responsive image" width="100%" >
+        </div>
+          <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <p class="lead text-justify">La magia de la Navidad es que hace que un año se pase volando, nos hace reflexionar sobre lo que hemos luchado, lo que hemos ganado y nos da fuerza para seguir adelante. 
+            <br><br>Que en este nuevo año tengas cien razones para reír, un sueño por el que vivir, mil alegrías para disfrutar y ningún motivo para sufrir. ¡Muchas Felicidades!
+
+            <br><br><kbd>De todo corazón te deseamos Muchas Felicidades y éxitos en tu vida.</kbd>
+            </p>
+          </div>
+        </div>
+
+
+        <!--SECTION RECUERDOS-->
+        <!--Carrousle de Imagenes-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="Imagenes/Background/slide1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="Imagenes/Background/slide2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="Imagenes/Background/slide3.jpg" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+
+
+
+        <!--Recuerdos Halloween-->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <h1>Recuerdos en Familia</h1>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+          <div class="transparent col-lg-4 col-md-4 col-sm-4 col-xs-4 mb-4">
+            <img src="Imagenes/Famili/matearbol.JPG" class="img-fluid img-thumbnail" alt="Responsive image" >
+          </div>
+          <div class="transparent col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img src="Imagenes/Famili/doradonavid.jpg" class="img-fluid img-thumbnail" alt="Responsive image">
+          </div>
+          <div class="transparent col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img src="Imagenes/Famili/4fantastic.JPG" class="img-fluid img-thumbnail" alt="Responsive image">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="transparent col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img src="Imagenes/Famili/nancyyyo.jpg" class="img-fluid img-thumbnail" alt="Responsive image" >
+          </div>
+          <div class="transparent col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img src="Imagenes/Famili/alexfamily.JPG" class="img-fluid img-thumbnail" alt="Responsive image">
+          </div>
+          <div class="transparent col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img src="Imagenes/Famili/casa.JPG" class="img-fluid img-thumbnail" alt="Responsive image">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="transparent col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img src="Imagenes/Famili/papahall.jpg" class="img-fluid img-thumbnail" alt="Responsive image" >
+          </div>
+          <div class="transparent col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img src="Imagenes/Famili/brother.JPG" class="img-fluid img-thumbnail" alt="Responsive image">
+          </div>
+          <div class="transparent col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img src="Imagenes/Famili/friends.JPG" class="img-fluid img-thumbnail" alt="Responsive image">
+          </div>
+        </div>
+
+        </div>
+
+        <!--Evento-->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <h1>Detalles</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="transparent col-lg-6 col-md-6 col-sm-6 col-xs-6 mb-4">
+            <p class="lead text-justify">
+               La Navidad se trata de pasar tiempo con familiares y amigos. Se trata de crear recuerdos felices que durarán toda la vida. Es la época de desearse mutuamente alegría, amor y paz, es por eso que este año te invitamos cordialmente a celebrar la maravilla y la alegría de la Navidad en compañia de tus seres queridos en nuestro hogar. Asiste, tenemos preparado muchas atracciones, platillos tipicos, musica, juegos, y mucho mas.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+            <img src="Imagenes/Background/posadafamily.jpg" class="img-fluid" alt="Responsive image">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3 text-center">
+            <img src="Imagenes/Background/chispas.jpg" class="img-fluid img-thumbnail" alt="Responsive image" width="100%">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-9 text-center">
+            <p class="lead text-justify">
+              Sientete como niños otra vez, siente con gran ilusión al ver las luces del árbol y la alegría en los rostros de los que amamos, sonrie a cada momento, olvida todos tus pesares y solo vuelve a tener tu alma de niño. <br><br>
+              “No tengo palabras para expresar este gran sentimiento que siento en la Noche Buena por todas las personas que estimo. Quiero que sepan que siempre les voy a desear lo mejor de la vida. Felices Fiestas Navideñas.” 
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <img src="Imagenes/Background/bannerrojomerry.jpg" class="img-fluid img-thumbnail" alt="Responsive image" >
+          </div>
+        </div>
+
+
+        <!--Ubicación-->
+        <div id="seccion3" class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <h1>Ubicación</h1>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 evento text-center">
+              <img src="Imagenes/Background/reloj.png" width="30%"><br>
+              <p class="lead text-center tituloubicacion" >
+                 Cuando
+              </p>
+              <p class="lead text-center textoubicacion">
+                 Sabado, 22 Diciembre 2018.
+              </p>
+            </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 evento text-center">
+                <img src="Imagenes/Background/ubicacionlogo.png" width="30%"><br>
+                <p class="lead text-center tituloubicacion">
+                   Donde
+                </p>
+                <p class="lead text-center textoubicacion">
+                 5 de Mayo, Col. Zaragoza, Nicolas Romero.
+              </p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="map-responsive">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15032.132477531952!2d-99.32293227827019!3d19.62588178662556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2199f8e41651f%3A0x1c08835c12a7e610!2s5+de+Mayo+100%2C+Zaragoza%2C+54424+Villa+Nicol%C3%A1s+Romero%2C+M%C3%A9x.!5e0!3m2!1ses!2smx!4v1545375365445" width="500" height="350" frameborder="0" style="border:3" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+
+        <!--Video-->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <h1>Video</h1>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-0">
+            <img src="Imagenes/Background/pino.png" width="100%" >
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <iframe width="100%" height="100%" 
+                    src="https://www.youtube.com/embed/gY4zu-kzRtE" picture-in-picture" frameborder="0" allowfullscreen ">
+                </iframe>
+          </div>
+        </div>
+
+
+        <!--Contacto-->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <h1>Contacto</h1>
+          </div>
+        </div>
+
+      </div> <!--Fin Container-->
+
+      <!--Footer-->
+      <footer class="footer text-center text-white-50">
+          <div class="row">
+
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <h5 class="text-uppercase">
+                <i class="material-icons">
+                  phone_iphone
+                </i>
+                Telefono
+              </h5>
+              <a class="text-white-50" href="">55-1660-0536</a>
+            </div>
+
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <h5 class="text-uppercase">
+                <i class="material-icons">
+                  place
+                </i>
+                Visita
+              </h5>
+              <a class="text-white-50" href="">5 de Mayo, No. 100<br>Nicolas Romero, Méx.</a>
+            </div>
+
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <h5 class="text-uppercase">
+                <i class="material-icons">
+                  email
+                </i>
+                Email
+              </h5>
+              <a class="text-white-50" href="">joenieto90@hotmail.com<br>luigiangel10@hotmail.com</a>
+            </div>
+        </div>
+
+        <div class="footer-social">
+          <a class="px-3 text-white-50" href="">
+            <span style="font-size: 3em; color: gray;">
+              <i class="fab fa-facebook-square"></i>
+            </span>
+          </a>
+          <a class="px-3 text-white-50" href="">
+            <span style="font-size: 3em; color: gray;">
+              <i class="fab fa-whatsapp"></i>
+            </span>
+          </a>
+          <a class="px-3 text-white-50" href="">
+            <span style="font-size: 3em; color: gray;">
+              <i class="fab fa-youtube"></i>
+            </span>
+          </a>
+        </div>
+
+        <div class="footer-copyright">© 2018  Joel Nieto Gómez</div>
+
+          
+      </footer>
+
+
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
